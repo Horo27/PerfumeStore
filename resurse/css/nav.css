@@ -1,0 +1,148 @@
+header{
+    display: flex;
+    height: var(--inaltime-meniu);
+    background-color: var(--bg-color);
+    padding-inline: var(--spatiu-padding);
+    align-items: center;
+}
+
+nav > *{
+    font-size: var(--fontsize);
+}
+
+header h1{
+    font-size: var(--fontsize-big);
+}
+
+
+nav{
+    align-items: center;
+    width: auto;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: right;
+}
+nav ul li{
+    width: var(--latime-buton);
+    height: var(--inaltime-meniu);
+    box-sizing: border-box;
+    line-height: var(--inaltime-meniu);
+    text-align: center;
+}
+
+.nav-animation,
+.submenu a{
+    display: block;
+    cursor: pointer;
+    height:100%;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.nav-animation::before{
+    visibility: hidden;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(to right top, #b9da41, #c3dc52, #ccde61, #d4e070, #dce27f, #dfdd7b, #e2d777, #e4d274, #e4c35e, #e5b44a, #e6a337, #e79225);
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-animation:hover::before {
+    visibility: visible;
+    transform: translateY(calc(var(--inaltime-meniu) - 10px));
+}
+
+.submenu ul{
+    display: none;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    transform-origin: top center; /* Set the transform origin */
+    transition: all 0.5s ease-in-out;
+}
+
+.submenu ul li:last-child {
+    border-bottom: none;
+}
+
+.submenu ul li a {
+    display: block;
+    text-align: center;
+    background-color: var(--bg-color);
+    border: 1px solid black;
+}
+
+.submenu ul li a:hover {
+    background-color: var(--third-color);
+}
+
+.submenu:hover ul {
+    display: block;
+    animation: scaleMenu 0.4s ease-in-out;
+}
+
+.with-icon i{
+    display: none;
+}
+
+nav label{
+    display: none;
+}
+
+@keyframes scaleMenu {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 800px){
+
+    :root{
+        --fontsize: 13px;
+        --fontsize-big: 20px;
+    }
+
+    
+    .with-icon i {
+        display: inline;
+        font-size:var(--fontsize-big);
+    }
+    
+    .with-icon span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav > ul{
+        display: none;
+    }
+
+    nav label{
+        display: block;
+        cursor: pointer;
+        font-size:  30px;
+        position: absolute;
+        right: 0;
+        top: 50;
+        transform:translateY(-50%);
+        margin-right: var(--spatiu-padding)
+    }
+
+    
+        
+}

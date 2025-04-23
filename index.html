@@ -12,6 +12,7 @@
     <meta name="apple-mobile-web-app-title" content="MyWebSite">
     <link rel="manifest" href="./resurse/imagini/site.webmanifest">
     <link rel="stylesheet" href="./resurse/css/index.css">
+    <link rel="stylesheet" href="./resurse//css/nav.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +22,31 @@
 </head>
 <body>
     <header>
-        <h1>Perfume Store</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Fragrances</a></li>
-                <li><a href="#">Candles</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
+      <h1>Perfume Store</h1>
+      <nav>
+        <label id="hamburger" for="ch-menu">
+          <i class="fa-solid fa-bars"></i>
+        </label>  
+          <ul>
+            <li class="submenu">
+              <a href="#">Home</a>
+              <ul>
+                <li><a href="#section2">Calendar</a></li>
+                <li><a href="#section4">Contact</a></li>
+                <li><a href="#section6">FaQs</a></li>
+                <li><a href="#section7">Map</a></li>
+              </ul>
+            </li>
+            
+            <li><a class="nav-animation" href="#">Fragrances</a></li>
+            <li><a class="nav-animation" href="#">Candles</a></li>
+            <li><a class="nav-animation" href="#">About Us</a></li>
+            <li>
+              <a class="nav-animation with-icon" href="#">
+                <i class="fa-solid fa-circle-user"></i>
+                <span>Login</span>
+              </a></li>
+          </ul>
         </nav>
     </header>
     <main>
@@ -128,7 +145,7 @@
 
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mrow>
-              <mi>Perfume</mi>
+              <mi class="math-title">Perfume</mi>
               <mo>=</mo>
               <mfrac>
                 <mrow>
