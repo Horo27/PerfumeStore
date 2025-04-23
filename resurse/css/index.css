@@ -1,0 +1,258 @@
+:root{
+    --main-color: #F7A274;
+    --second-color: #F7BA74;
+    --third-color: #F7D074;
+    --fourth-color: #F77474;
+    --fifth-color: #F7CC74;
+    --bg-color: #FAEBE3;
+    --spatiu-padding: 20px;
+    --spatiu-gap: 10px;
+}
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* width: 80%; */
+    margin: auto;
+    padding: 0;
+}
+
+#table-container {
+  overflow-x: auto;
+  margin: 20px auto;
+  width: 100%;         /* ✅ Add this */
+}
+
+table,th,tfoot,td{
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+table{
+  width: 100%;
+  height: 100%;
+  min-width: 800px;
+}
+
+table td:nth-child(odd),
+table th:nth-child(odd) {
+  background-color: var(--second-color)
+}
+
+table td:nth-child(even),
+table th:nth-child(even) {
+  background-color: var(--third-color)
+}
+
+tr:hover td,
+tr:hover th {
+  background-color: var(--main-color); /* culoare pt tot rândul la hover */
+}
+
+td:hover,
+th:hover {
+  background-color: var(--fourth-color) !important; /* culoare diferită pt celula directă */
+}
+
+table>caption{
+  caption-side: bottom;
+  text-align: right;
+}
+
+
+header{
+    display: flex;
+    height: 15%;
+    background-color: var(--bg-color);
+    padding-inline: var(--spatiu-padding);
+    align-items: center;
+}
+
+nav{
+    align-items: center;
+    width: auto;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: right;
+}
+nav ul li{
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+picture > *{
+    width: 300px;
+    height: 300px;
+}
+
+
+#grid-pagina {
+    display: grid;
+    grid-template-areas:"section1 section1 section1 section1"
+                        "section8 section8 section8 section8" 
+                        "section3 section2 section2 section4"
+                        "section5 section6 section7 section7";
+    gap: var(--spatiu-gap);
+}
+
+#grid-pagina > * {
+  padding: var(--spatiu-padding);
+  border: black solid 1px;
+}
+
+#grid-pagina img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+#section1 {
+  grid-area: section1;
+  background-color: var(--second-color);
+}
+
+#section8 {
+  grid-area: section8;
+  background-color: var(--fifth-color);
+}
+
+#section2 {
+  grid-area: section2;
+}
+
+#section3 {
+  grid-area: section3;
+}
+
+#section4 {
+  grid-area: section4;
+}
+
+#section5 {
+  grid-area: section5;
+}
+
+#section6 {
+  grid-area: section6;
+}
+
+#section7 {
+  grid-area: section7;
+}
+
+.container-iframe{
+    display: flex;
+    flex-direction:row;
+}
+
+.taburi-iframe{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: flex-start;
+}
+
+.taburi-iframe > *{
+    text-decoration: none;
+    border: black solid 1px;
+    padding: 10px;
+    transition: ease-in-out 0.3s;
+    border-left: none;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.taburi-iframe > *:hover{
+   padding-left: 25px;
+}
+
+#link-sus{
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  margin-bottom:20px;
+  border: 1px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: inset 0 0 10px black;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: block;
+  text-align: center;
+
+  opacity: 80%;
+}
+
+#link-sus div{
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  border: black solid 1px;
+}
+
+#link-sus a{
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  transition: ease-in-out 0.3s;
+  display: inline-block;
+  opacity: 60%;
+}
+
+#link-sus a:hover{
+  transform: scale(1.5);
+  opacity: 100%;
+}
+
+#link-sus:hover div{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 1300px) {
+    :root{
+        --spatiu-padding: 10px;
+        --spatiu-gap: 5px;
+    }
+
+    #grid-pagina {
+      overflow: hidden;
+      display: grid;
+      grid-template-areas:"section1"
+                          "section2"
+                          "section3"
+                          "section4"
+                          "section5"
+                          "section6"
+                          "section7"
+                          "section8";
+  }
+
+    #table-container{
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    :root{
+        --spatiu-padding: 5px;
+        --spatiu-gap: 2px;
+    }
+   
+  
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title>Perfume Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
+    <meta name="keywords" content="luxury, perfume, fragrances, scent"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+    <meta name="description" content="Curs de Tehnici Web. Limbajul HTML. Taguri."><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+    <link rel="icon" type="image/png" href="./resurse/imagini/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon.svg">
+    <link rel="shortcut icon" href="./resurse/imagini/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="MyWebSite">
+    <link rel="manifest" href="./resurse/imagini/site.webmanifest">
+    <link rel="stylesheet" href="./resurse/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <h1>Perfume Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Fragrances</a></li>
+                <li><a href="#">Candles</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      
+      <div id="grid-pagina">
+        <section id="section1">
+              <h2><i><q>Be yourself; everyone else is already taken.</q></i></h2>
+              <p><cite>-Oscar Wilde</cite></p>
+  
+              <figure>
+                  <img src="./resurse/imagini/sunrise.jpg" alt="" width="300" height="200">
+                  <figcaption>Beaver Dam, USA</figcaption>
+              </figure>
+              
+        </section>
+        
+        <section id="section2">
+          <h2>Discover Your Signature Scent - Explore Our Exclusive Perfume Collection</h2>
+          <div id="table-container">
+            <table>
+              <thead> 
+                <th>Product Name</th>
+                <th>Brand</th>
+                <th>Fragrance Type</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Stock</th>
+              </thead>
+              <tr>
+                <td>La Vie Est Belle</td>
+                <td>Lancôme</td>
+                <td>Floral</td>
+                <td>100ml</td>
+                <td>$98</td>
+                <td>In Stock</td>
+              </tr>
+              <tr>
+                <td>Dior Sauvage</td>
+                <td>Dior</td>
+                <td>Woody Aromatic</td>
+                <td>60ml</td>
+                <td>$89</td>
+                <td>In Stock</td>
+              </tr>
+              <tr>
+                <td rowspan="2" colspan="3">Your Choose</td>
+                <td>50ml</td>
+                <td rowspan="2" colspan="3">Contact Us</td>
+              </tr>
+              <tr> 
+                <td>100ml</td>
+              </tr>
+              <tr>
+                <td>Light Blue</td>
+                <td>Dolce & Gabbana</td>
+                <td>Citrus</td>
+                <td>50ml</td>
+                <td>$75</td>
+                <td>Low Stock</td>
+              </tr>
+              <tr>
+                <td>Black Opium</td>
+                <td>Yves Saint Laurent</td>
+                <td>Sweet Oriental</td>
+                <td>90ml</td>
+                <td>$110</td>
+                <td>Out of Stock</td>
+              </tr>
+              <tr>
+                <td>Aventus</td>
+                <td>Creed</td>
+                <td>Fruity Chypre</td>
+                <td>100ml</td>
+                <td>$350</td>
+                <td>In Stock</td>
+              </tr>
+              <tfoot>
+                <tr>
+                  <td colspan="6">"Whispered Stories, Bottled in Fragrance"</td>
+                </tr>
+              </tfoot>
+              <caption>*prices may vary during sales</caption>
+            </table>
+          </div>
+
+        </section>
+        
+        <section id="section3">    
+          <h2><i class="fa-solid fa-pen-fancy fa-beat-fade"></i> Let Fragrance Be the Ink to Your Soul’s Story  <i class="fa-solid fa-pen-fancy fa-beat-fade"></i></h2>
+          
+          <picture>
+            <source media="(min-width:650px)" srcset="./resurse/imagini/pic1.jpg">
+            <source media="(min-width:465px)" srcset="./resurse/imagini/pic2.jpg">
+            <img src="./resurse//imagini/sunrise.jpg" alt="Flowers" style="width:auto;">
+          </picture>
+
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <mi>Perfume</mi>
+              <mo>=</mo>
+              <mfrac>
+                <mrow>
+                  <mi>Notes</mi>
+                  <mo>×</mo>
+                  <mi>Evaporation Rate</mi>
+                </mrow>
+                <mi>Total Concentration</mi>
+              </mfrac>
+            </mrow>
+          </math>
+
+        </section>
+        
+        <section id="section4">
+          <h2>Contact Us</h2>
+          <form action="#" method="post">
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name"><br><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email"><br><br>
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message"></textarea><br><br>
+              <input type="submit" value="Submit">
+          </form>
+        </section>
+        
+        <section id="section5">
+          <h2>Passionate about perfumes, dedicated to you.</h2>
+          <section id="subsection11">
+              <h3>Our Story</h3>
+              <p>Founded with a <b>passion</b> for fragrances, our journey began with a simple goal: to bring the finest <b>perfumes</b> to everyone. We believe that a scent is more than just a fragrance—it's an expression of identity and emotion. Every perfume we offer is selected to provide a unique <b>experience</b> that speaks to your senses and memories.</p>
+          </section>
+          <section id="subsection12">
+              <h3>Our Commitment</h3>
+              <p>We are dedicated to providing high-quality perfumes crafted with care and attention to detail. Our commitment goes beyond selling fragrances—we aim to offer exceptional customer service, ensuring that your journey in discovering the perfect scent is seamless, enjoyable, and personalized.</p>
+          </section>
+        </section>
+
+        <section id="section6">
+  
+          <h2>FAQs <i class="fa-regular fa-comment"></i></h2>
+
+          <details>
+            <summary>What is the difference between Eau de Parfum, Eau de Toilette, and Eau de Cologne?</summary>
+            <p>
+              The difference lies in the concentration of fragrance oils:
+            </p>
+                <ul>
+                    <li><strong>Eau de Parfum (EDP):</strong> Contains 15-20% fragrance oil and lasts around 6-8 hours.</li>
+                    <li><strong>Eau de Toilette (EDT):</strong> Contains 5-15% fragrance oil and lasts about 4-6 hours.</li>
+                    <li><strong>Eau de Cologne (EDC):</strong> Has a lower concentration (2-5%) and lasts about 2-3 hours.</li>
+                </ul>
+          </details>
+
+          <details>
+            <summary>How should I store my perfumes to make them last longer?</summary>
+            <p>
+                To preserve your perfume's longevity, store it in a cool, dark place away from direct sunlight and heat sources. Avoid keeping it in the bathroom, as humidity can alter the fragrance composition.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do perfumes expire?</summary>
+            <p>
+                Yes, perfumes have a shelf life. Most last between 3 to 5 years if stored properly. Signs of expiration include a change in color, a weaker scent, or a sour smell.
+            </p>
+          </details>
+
+          <details>
+            <summary>How can I choose the right perfume for my personality and style?</summary>
+            <p>
+                Perfume selection depends on personal preference and occasions:
+            </p>
+                <ul>
+                    <li><strong>Fresh &amp; Citrusy:</strong> Ideal for energetic and outdoorsy individuals.</li>
+                    <li><strong>Floral &amp; Romantic:</strong> Great for feminine, elegant personalities.</li>
+                    <li><strong>Woody &amp; Spicy:</strong> Suits sophisticated and bold individuals.</li>
+                    <li><strong>Oriental &amp; Exotic:</strong> Perfect for mysterious and sensual vibes.</li>
+                </ul>
+            <p>
+              Test perfumes on your skin before purchasing, as they can smell different depending on body chemistry.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I layer different perfumes?</summary>
+            <p>
+                Yes! Layering allows you to create a unique scent. Start with a base fragrance (like a musk or vanilla), then add a complementary top note (such as citrus or floral). Avoid mixing too many strong scents to prevent clashing.
+            </p>
+          </details>
+        </section>
+
+        <section id="section7">
+          <h2>Harta Google</h2>
+          <p>iFrame cu harta:</p>
+          <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.593936086245!2d26.099983664602695!3d44.43563889182432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ffeed76f8b81%3A0x71bff14a2fe9bf42!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83%20-%20Universitatea%20din%20Bucure%C8%99ti!5e0!3m2!1sen!2sro!4v1670840501487!5m2!1sen!2sro"
+                  width="600"
+                  height="450"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <hr>
+        </section>
+
+        <section id="section8">
+          <h2>Indulge in luxury with our exquisite range of perfumes.
+              Find the perfect fragrance that defines you.
+              Shop now and experience elegance in every scent!
+          </h2>
+
+          <div class="container-iframe">
+
+            <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/sPi0UbYtv9Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+            <div class="taburi-iframe">
+            <a href="https://www.youtube.com/embed/sPi0UbYtv9Y" target="ifr-video">Video #1</a>
+            <a href="https://www.youtube.com/embed/qMR-tpgZ82Y" target="ifr-video">Video #2</a>
+            <a href="https://www.youtube.com/embed/mABlP2NGupI" target="ifr-video">Video #3</a><br>
+            </div>
+        
+        </div>
+
+        </section>
+
+      </div>
+
+    </main>
+    <footer>
+        <div id="link-sus">
+          <a href="#">&#129081;</a>
+          <div>Top</div>
+        </div>
+    </footer>
+    
+
+</body></html>
