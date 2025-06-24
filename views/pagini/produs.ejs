@@ -4,9 +4,11 @@
         <meta name="keywords" content="luxury, perfume, fragrances, scent"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
     <meta name="description" content="Curs de Tehnici Web. Limbajul HTML. Taguri.">
         
-        <title>Cofetăria Dulcelind - home</title>
+        <title>Perfume Store</title>
         <%- include("../fragmente/head") %>     
         <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+        <link href="/resurse/css/produse.css" type="text/css" rel="stylesheet" /> <!-- Add produse.css for comparison styles -->
+        <script type="text/javascript" src="/resurse/js/produse.js"></script>
     </head>
 
         <%- include("../fragmente/header") %>
@@ -24,12 +26,32 @@
                     <p>Data adăugare: <span class="categorie"><%- locals.prod.data_adaugare %> </span></p>
                     <figure class="imag-produs">
                         <img  src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
-                    </figure>    
+                    </figure>  
+                    <button class="compara-btn" 
+                            data-id="<%- locals.prod.id %>" 
+                            data-nume="<%- locals.prod.nume %>" 
+                            data-imagine="<%- locals.prod.imagine %>">Compară</button>  
                 </article>
             
         </section>
     </main>
 
     <%- include("../fragmente/footer") %>
+    <div id="container-comparare">
+        <div id="produse-comparate"></div>
+        <div class="actiuni-comparare">
+            <button class="btn-afiseaza-comparatie">Afișează comparație</button>
+            <button class="btn-sterge-comparatii">Șterge toate</button>
+        </div>
+    </div>
+
+    <!-- Add the comparison window -->
+    <div id="fereastra-comparare">
+        <div id="continut-comparare">
+            <button id="inchide-comparare">&times;</button>
+            <h2>Comparare produse</h2>
+            <div id="tabel-container"></div>
+        </div>
+    </div>
     </body>
 </html>

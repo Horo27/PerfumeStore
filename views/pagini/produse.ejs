@@ -16,6 +16,18 @@
     
 
     <main>
+
+        <div> Fără alcool:
+    <p><label>Da
+        <input id="i_alcool1" name="gr_alcool" value="da" type="radio"/>
+    </label></p>
+    <p><label>Nu
+        <input id="i_alcool2" name="gr_alcool" value="nu" type="radio"/>
+    </label></p>
+    <p><label>Toate
+        <input id="i_alcool3" checked name="gr_alcool" value="toate" type="radio"/>
+    </label></p>
+</div>
         <label>
             <input type="checkbox" id="salveaza-filtrare">
             salvează filtrare<br>
@@ -84,7 +96,8 @@
         
         </p>
       
-        <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+        <p id="p-suma"></p>
+        <button id="btn-minim">Arată doar produsul cu prețul minim</button>
 
         <section id="produse">
 
@@ -111,7 +124,8 @@
                             Selectează:<br/>
                             <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
                         </label>
-                    </article>
+                        <button class="compara-btn" data-id="<%- prod.id %>">Compară</button>
+                    </article>  
                 <% }%>
             </div>
 
@@ -121,6 +135,23 @@
                 <button id="pagina-urm">Următor</button>
             </div>
         </section>
+        <!-- Add the comparison container at the end of the page, right before the closing body tag -->
+        <div id="container-comparare">
+            <div id="produse-comparate"></div>
+            <div class="actiuni-comparare">
+                <button class="btn-afiseaza-comparatie">Afișează comparație</button>
+                <button class="btn-sterge-comparatii">Șterge toate</button>
+            </div>
+        </div>
+
+        <!-- Add the comparison window -->
+        <div id="fereastra-comparare">
+            <div id="continut-comparare">
+                <button id="inchide-comparare">&times;</button>
+                <h2>Comparare produse</h2>
+                <div id="tabel-container"></div>
+            </div>
+        </div>
     </main>
 
     <%- include("../fragmente/footer") %>

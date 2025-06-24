@@ -81,3 +81,223 @@ main{
     
     border:1px solid  var(--culoare-mov);
 }
+
+/* ...existing code... */
+
+/* Stiluri pentru butonul de comparare */
+.compara-btn {
+    display: inline-block;
+    background-color: var(--culoare-mov);
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: rgb(209, 47, 47);
+    font-size: 0.9rem;
+}
+
+.compara-btn:hover:not([disabled]) {
+    background-color: var(--cl-marcare);
+    border: 1px solid var(--culoare-mov);
+    /* color: #333; */
+}
+
+.compara-btn[disabled] {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Stiluri pentru containerul de comparare */
+#container-comparare {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-top: 2px solid var(--culoare-mov);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    height: 110px;
+}
+
+.container-spacing {
+    padding-bottom: 130px !important; /* Adding extra padding at the bottom to prevent overlap */
+}
+
+#container-comparare.activ {
+    transform: translateY(0);
+}
+
+#container-comparare.activ {
+    transform: translateY(0);
+}
+
+#produse-comparate {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    max-width: 80%;
+}
+
+.produs-comparat {
+    position: relative;
+    min-width: 120px;
+    max-width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    background: white;
+}
+
+.produs-comparat img {
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+}
+
+.produs-comparat h4 {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.produs-comparat .sterge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actiuni-comparare {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-afiseaza-comparatie, .btn-sterge-comparatii {
+    background-color: var(--culoare-mov);
+    color: var(--culoare-mov);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-afiseaza-comparatie:hover, .btn-sterge-comparatii:hover {
+    background-color: var(--culoare-roz-inchis);
+}
+
+/* Stiluri pentru fereastra de comparare */
+#fereastra-comparare {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+#continut-comparare {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#inchide-comparare {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tabel-comparare {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabel-comparare th, .tabel-comparare td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabel-comparare th {
+    background-color: var(--culoare-mov);
+    color: white;
+}
+
+.tabel-comparare tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabel-comparare img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Tooltip pentru butonul de comparare */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
