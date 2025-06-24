@@ -1,0 +1,31 @@
+{
+  "name": "perfumestore",
+  "version": "1.0.0",
+  "description": "my school project website featuring a store for perfumes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horo27/PerfumeStore.git"
+  },
+  "keywords": [
+    "luxury",
+    "perfume",
+    "fragrances",
+    "scent"
+  ],
+  "author": "Hororoi Valentin Alexandru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Horo27/PerfumeStore/issues"
+  },
+  "homepage": "https://github.com/Horo27/PerfumeStore#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

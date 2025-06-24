@@ -5,50 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- va fi explicat când ajungem la CSS -->
     <meta name="keywords" content="luxury, perfume, fragrances, scent"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
     <meta name="description" content="Curs de Tehnici Web. Limbajul HTML. Taguri."><!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
-    <link rel="icon" type="image/png" href="./resurse/imagini/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="./resurse/imagini/favicon.svg">
-    <link rel="shortcut icon" href="./resurse/imagini/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./resurse/imagini/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="MyWebSite">
-    <link rel="manifest" href="./resurse/imagini/site.webmanifest">
-    <link rel="stylesheet" href="./resurse/css/index.css">
-    <link rel="stylesheet" href="./resurse//css/nav.css">
+    
+    <%- include('../fragmente/head.ejs') %><!-- head-ul paginii, inclusiv favicon, css-uri, fonturi, etc. -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-      <h1>Perfume Store</h1>
-      <nav>
-        <label id="hamburger" for="ch-menu">
-          <i class="fa-solid fa-bars"></i>
-        </label>  
-          <ul>
-            <li class="submenu">
-              <a href="#">Home</a>
-              <ul>
-                <li><a href="#section2">Calendar</a></li>
-                <li><a href="#section4">Contact</a></li>
-                <li><a href="#section6">FaQs</a></li>
-                <li><a href="#section7">Map</a></li>
-              </ul>
-            </li>
-            
-            <li><a class="nav-animation" href="#">Fragrances</a></li>
-            <li><a class="nav-animation" href="#">Candles</a></li>
-            <li><a class="nav-animation" href="#">About Us</a></li>
-            <li>
-              <a class="nav-animation with-icon" href="#">
-                <i class="fa-solid fa-circle-user"></i>
-                <span>Login</span>
-              </a></li>
-          </ul>
-        </nav>
-    </header>
+    <!-- header -->
+    <%- include('../fragmente/header.ejs') %>
+
     <main>
       
       <div id="grid-pagina">
@@ -57,7 +21,7 @@
               <p><cite>-Oscar Wilde</cite></p>
   
               <figure>
-                  <img src="./resurse/imagini/sunrise.jpg" alt="" width="300" height="200">
+                  <img src="../../resurse/imagini/sunrise.jpg" alt="" width="300" height="200">
                   <figcaption>Beaver Dam, USA</figcaption>
               </figure>
               
@@ -138,9 +102,9 @@
           <h2><i class="fa-solid fa-pen-fancy fa-beat-fade"></i> Let Fragrance Be the Ink to Your Soul’s Story  <i class="fa-solid fa-pen-fancy fa-beat-fade"></i></h2>
           
           <picture>
-            <source media="(min-width:650px)" srcset="./resurse/imagini/pic1.jpg">
-            <source media="(min-width:465px)" srcset="./resurse/imagini/pic2.jpg">
-            <img src="./resurse//imagini/sunrise.jpg" alt="Flowers" style="width:auto;">
+            <source media="(min-width:650px)" srcset="../../resurse/imagini/pic1.jpg">
+            <source media="(min-width:465px)" srcset="../../resurse/imagini/pic2.jpg">
+            <img src="../../resurse//imagini/sunrise.jpg" alt="Flowers" style="width:auto;">
           </picture>
 
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -277,12 +241,8 @@
       </div>
 
     </main>
-    <footer>
-        <div id="link-sus">
-          <a href="#">&#129081;</a>
-          <div>Top</div>
-        </div>
-    </footer>
     
+    <!-- footer -->
+    <%- include('../fragmente/footer.ejs') %>
 
 </body></html>

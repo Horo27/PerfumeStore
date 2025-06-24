@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="luxury, perfume, fragrances, scent"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+    <meta name="description" content="Curs de Tehnici Web. Limbajul HTML. Taguri.">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>Cofetăria Dulcelind - home</title>
+        <%- include("../fragmente/head") %>     
+        <!-- <script type="text/javascript" src=/resurse/js/seturi.js></script> -->
+        <!-- <script type="text/javascript" src=/resurse/js/produse-cos.js></script> -->
+
+    </head>
+    <body>
+    <%- include("../fragmente/header") %>
+
+    <main>
+        <section id="seturi">
+            <h2>Seturi de produse</h2>
+            <% if (locals.seturi && locals.seturi.length) { %>
+                <% for(let set of locals.seturi) { 
+                    let pret_total=0; 
+                    for(let prod of set.produse) { 
+                        pret_total +=parseFloat(prod.pret);
+                    } %>
+                    <div class="set" style="border:1px solid #ccc; margin:2em 0; padding:1em; border-radius:8px;">
+                        <h3><%= set.nume_set %></h3>
+                        <p><%= set.descriere_set %></p>
+                        <p style="font-weight:bold;">
+                            Preț total set:
+                            <span style="text-decoration:line-through; color:#b00;">
+                                <%= pret_total.toFixed(2) %> lei
+                            </span>
+                            <span style="color:#080; margin-left:10px;">
+                                <%= (pret_total-pret_total/10).toFixed(2) %> lei
+                            </span>
+                        </p>
+                        <div class="grid-produse">
+                            <% for(let prod of set.produse) { %>
+                                <article class="produs" data-id="<%- prod.id %>" data-nume="<%- prod.nume %>">
+                                    <h4 class="nume">
+                                        <a href="/produs/<%-prod.id %>">
+                                            <span class="val-nume"><%- prod.nume %></span>
+                                        </a>
+                                    </h4>
+                                    <p class="pret">Preț: <span class="val-pret"><%- prod.pret %></span> lei</p>
+                                    <figure>
+                                        <a href="/produs/<%-prod.id %>">
+                                            <img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]" />
+                                        </a>
+                                    </figure>
+                                </article>
+                            <% } %>
+                        </div>
+
+                    </div>
+                <% } %>
+            <% } else { %>
+                <p>Nu există seturi disponibile.</p>
+            <% } %>
+        </section>
+    </main>
+
+    <%- include("../fragmente/footer") %>
+</body>
+</html>
